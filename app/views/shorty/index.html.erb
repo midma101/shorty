@@ -1,0 +1,17 @@
+
+<h1>Get Shorty</h1>
+
+<%= form_with scope: :shorty, local: true do |form| %>
+  <p>
+    <%= form.label :url %><br>
+    <%= form.text_field :url %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<% if @error.present? %>
+  <h3 style="color: red"><%= @error %></h3>
+<% end %>
